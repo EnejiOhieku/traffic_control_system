@@ -1,0 +1,439 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Data Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .road {
+            width: 100%;
+            height: 400px;
+            background-color: #333;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .lane {
+            width: 30%;
+            height: 100%;
+            background-color: #555;
+            position: absolute;
+        }
+        .lane.left {
+            left: 0;
+        }
+        .lane.right {
+            right: 0;
+        }
+        .lane.middle {
+            left: 35%;
+            width: 30%;
+        }
+        .traffic-light {
+            width: 50px;
+            height: 150px;
+            background-color: #222;
+            position: absolute;
+            top: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .traffic-light.left {
+            left: 10%;
+        }
+        .traffic-light.middle {
+            left: calc(50% - 25px);
+        }
+        .traffic-light.right {
+            right: 10%;
+        }
+        .light {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .light.red {
+            background-color: red;
+        }
+        .light.yellow {
+            background-color: yellow;
+        }
+        .light.green {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Traffic Data Display</h1>
+    <div class="road">
+        <div class="lane left"></div>
+        <div class="lane middle"></div>
+        <div class="lane right"></div>
+        <div class="traffic-light left">
+            <div class="light red" id="red-light-left"></div>
+            <div class="light yellow" id="yellow-light-left"></div>
+            <div class="light green" id="green-light-left"></div>
+        </div>
+        <div class="traffic-light middle">
+            <div class="light red" id="red-light-middle"></div>
+            <div class="light yellow" id="yellow-light-middle"></div>
+            <div class="light green" id="green-light-middle"></div>
+        </div>
+        <div class="traffic-light right">
+            <div class="light red" id="red-light-right"></div>
+            <div class="light yellow" id="yellow-light-right"></div>
+            <div class="light green" id="green-light-right"></div>
+        </div>
+    </div>
+    <div class="traffic-data">
+        <h2>Density</h2>
+        <p id="density">Loading...</p>
+    </div>
+    <div class="traffic-data">
+        <h2>Timing</h2>
+        <p id="timing">Loading...</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatted HTML Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formatted HTML Table</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+                <th>Column 3</th>
+                <th>Column 4</th>
+                <th>Column 5</th>
+                <th>Column 6</th>
+                <th>Column 7</th>
+                <th>Column 8</th>
+                <th>Column 9</th>
+                <th>Column 10</th>
+                <th>Column 11</th>
+                <th>Column 12</th>
+                <th>Column 13</th>
+                <th>Column 14</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Record 1</td>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+                <td>Data 8</td>
+                <td>Data 9</td>
+                <td>Data 10</td>
+                <td>Data 11</td>
+                <td>Data 12</td>
+                <td>Data 13</td>
+            </tr>
+            <tr>
+                <td>Record 2</td>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+                <td>Data 8</td>
+                <td>Data 9</td>
+                <td>Data 10</td>
+                <td>Data 11</td>
+                <td>Data 12</td>
+                <td>Data 13</td>
+            </tr>
+            <tr>
+                <td>Record 3</td>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+                <td>Data 8</td>
+                <td>Data 9</td>
+                <td>Data 10</td>
+                <td>Data 11</td>
+                <td>Data 12</td>
+                <td>Data 13</td>
+            </tr>
+            <tr>
+                <td>Record 4</td>
+                <td>Data 1</td>
+                <td>Data 2</td>
+                <td>Data 3</td>
+                <td>Data 4</td>
+                <td>Data 5</td>
+                <td>Data 6</td>
+                <td>Data 7</td>
+                <td>Data 8</td>
+                <td>Data 9</td>
+                <td>Data 10</td>
+                <td>Data 11</td>
+                <td>Data 12</td>
+                <td>Data 13</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html> -->
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCSMonitor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        .titlebar {
+            background-color: #6a0dad;
+            overflow: hidden;
+            text-align: center;
+            color: white;
+        }
+
+        .footer {
+            background-color: #6a0dad;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        
+      
+        .button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 6px 14px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            border-radius: 6px;
+            border: none;
+            margin: 0 25px;
+
+            background: #6E6D70;
+            box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
+            color: #DFDEDF;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+        }
+
+
+        .button-active {
+            color: #fff;
+            background: linear-gradient(180deg, #7129a4 0%, #6a0dad 100%);
+        }
+
+
+        .card {
+            border-radius: 20px;
+            margin-bottom: 80px;
+            display: flex;
+            width: 750px;
+            height: 500px;
+            box-shadow: 10px 10px 5px lightgray;
+            border-color: black;
+            border-style:  solid;
+            border-width: 1px;
+            background-color: white;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-nav {
+            display: flex; 
+            margin: 20px;
+            position: relative;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="titlebar">
+        <h1>Traffic Control System Monitor</h1>
+    </div>
+    <div class="content">
+        <div class="button-nav">
+            <button id="btn0" class="button button-active" onclick="setCard(0)" role="button">Display</button>
+            <button id="btn1" class="button" onclick="setCard(1)" role="button">Data Table</button>
+            <button id="btn2" class="button" onclick="setCard(2)" role="button">Data Graph</button>
+        </div>
+        <div id="card0" class="card" style='background: url("/static/t_junc.jpg")'></div>
+        <div id="card1" class="card" style='display: none; width: max-content; padding: 10px;'>
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <th>Column 4</th>
+                    <th>Column 5</th>
+                    <th>Column 6</th>
+                    <th>Column 7</th>
+                    <th>Column 8</th>
+                    <th>Column 9</th>
+                    <th>Column 10</th>
+                    <th>Column 11</th>
+                    <th>Column 12</th>
+                    <th>Column 13</th>
+                    <th>Column 14</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Record 1</td>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 7</td>
+                    <td>Data 8</td>
+                    <td>Data 9</td>
+                    <td>Data 10</td>
+                    <td>Data 11</td>
+                    <td>Data 12</td>
+                    <td>Data 13</td>
+                </tr>
+                <tr>
+                    <td>Record 2</td>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 7</td>
+                    <td>Data 8</td>
+                    <td>Data 9</td>
+                    <td>Data 10</td>
+                    <td>Data 11</td>
+                    <td>Data 12</td>
+                    <td>Data 13</td>
+                </tr>
+                <tr>
+                    <td>Record 3</td>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 7</td>
+                    <td>Data 8</td>
+                    <td>Data 9</td>
+                    <td>Data 10</td>
+                    <td>Data 11</td>
+                    <td>Data 12</td>
+                    <td>Data 13</td>
+                </tr>
+                <tr>
+                    <td>Record 4</td>
+                    <td>Data 1</td>
+                    <td>Data 2</td>
+                    <td>Data 3</td>
+                    <td>Data 4</td>
+                    <td>Data 5</td>
+                    <td>Data 6</td>
+                    <td>Data 7</td>
+                    <td>Data 8</td>
+                    <td>Data 9</td>
+                    <td>Data 10</td>
+                    <td>Data 11</td>
+                    <td>Data 12</td>
+                    <td>Data 13</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div id="card2" class="card" style='display: none;'>
+            hello3
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; EnejiOhieku. All rights reserved.</p>
+    </div>
+
+    <script src="/static/index.js"></script>
+</body>
+</html>
