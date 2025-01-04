@@ -51,6 +51,7 @@ def pull_data(request: HttpRequest):
             response = json.load(jsonData)
         
         time_diff = int(time.time() - response["last_update"])
+        last_time = 23
 
         if time_diff > 24*3600:
             formatted_time = "More than a Day"
@@ -59,9 +60,19 @@ def pull_data(request: HttpRequest):
             mins = (time_diff - hrs*3600)//60
             secs = time_diff % 60
             formatted_time = f"{hrs}Hrs {mins}min {int(secs)}secs"
+            last_time = (datetime.datetime.now().hour - hrs) % 24
 
+        response["last_time"] = last_time
         response["last_update"] = formatted_time
         response["success"] = True
+
+        count = [0, 0, 0]
+
+        for t_count in response["traffic"]:
+            for i in range(3):
+                count[i] += t_count[i]
+
+        response["count"] = count
         return JsonResponse(response)
     except:
         return JsonResponse({"success": False})
