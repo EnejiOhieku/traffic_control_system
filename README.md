@@ -35,5 +35,5 @@ I designed the system as a distributed architecture dividing responsibilities be
     *   Adjusts timing based on density data received from the ESP8266.
 
 
-## PS
-The hardware was later updated to make the esp8266 do the job of controlling the hardware components and the communication to the backend server to reduce latency and complexity.
+## PS (DISCLAIMER)
+**The hardware was later updated to make the esp8266 do the job of controlling the hardware components and the communication to the backend server to reduce latency and complexity**
