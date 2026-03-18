@@ -3,6 +3,11 @@
 ## Project Overview
 The **Distributed Traffic Control System** is an IoT-based solution for managing and monitoring traffic at multi-road intersections. It integrates embedded hardware for real-time control with a Django-based web server for remote observability and data analytics. This project was done as a mini demonstration which could be scaled with computer vision for density tracking.
 
+## Demo
+The project was done in 200L second semester, I was able to get a video I made from my google cloud to post on youtube (PS the video was poorly made 😂)
+[](tksadfkj)
+
+
 ## System Architecture
 I designed the system as a distributed architecture dividing responsibilities between field hardware and a central cloud server.
 ![](system_architecture.png)
@@ -18,7 +23,7 @@ I designed the system as a distributed architecture dividing responsibilities be
 
 ### 2. Intersection Gateway & Sensor Node (ESP8266)
 *   **Hardware:** ESP8266 NodeMCU.
-*   **Firmware:** C++ (Arduino Framework).
+*   **Firmware:** C++ (Arduino Framework) located in `tscm_firmware`.
 *   **Responsibilities:**
     *   **Connectivity:** Connects to Wi-Fi and synchronizes time via NTP.
     *   **Sensor Fusion:** Directly reads IR sensors on 3 roads to calculate traffic density and vehicle counts.
@@ -27,13 +32,35 @@ I designed the system as a distributed architecture dividing responsibilities be
 
 ### 3. Field Controller (Arduino Nano)
 *   **Hardware:** Arduino Nano (Connected via Serial).
-*   **Firmware:** C++ (Arduino Framework).
+*   **Firmware:** C++ (Arduino Framework) located in `nano_firmware`.
 *   **Responsibilities:**
     *   Directly drives the Traffic Light LEDs (Red, Yellow, Green).
     *   Manages the state machine for traffic sequencing.
     *   Updates the 1602 LCD Status Display.
     *   Adjusts timing based on density data received from the ESP8266.
 
+## Directory Structure
 
-## PS (DISCLAIMER)
-**The hardware was later updated to make the esp8266 do the job of controlling the hardware components and the communication to the backend server to reduce latency and complexity**
+```text
+traffic_control_system/
+├── traffic_control_server/      # Django Web Application
+│   ├── static/                  # Static Assets
+│   │   └── admin/js/vendor/     # Dependencies (jQuery, Select2, XRegExp)
+│   └── ...
+├── tscm_firmware/               # ESP8266 Gateway Firmware
+│   └── tscm_firmware.ino        # Logic for Wi-Fi, IR Sensors, and HTTP
+├── nano_firmware/               # Arduino Nano Controller Firmware
+│   └── nano_firmware.ino        # Logic for LED driving, LCDs, and Timing
+└── README.md                    # Project Documentation
+```
+
+## Configuration
+
+### Firmware (ESP8266)
+The firmware (`tscm_firmware.ino`) is configured to read from specific GPIO pins for IR sensors:
+*   **Road 1:** Pins 13, 0
+*   **Road 2:** Pins 14, 12
+*   **Road 3:** Pins 5, 4
+
+## License
+This project utilizes open-source libraries included with the Django admin interface, including **jQuery**, **Select2**, and **XRegExp**. Refer to the files in `static/admin/js/vendor/` for specific license details.
