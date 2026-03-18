@@ -46,9 +46,11 @@ I designed the system as a distributed architecture dividing responsibilities be
 ```text
 traffic_control_system/
 ├── traffic_control_server/      # Django Web Application
+│   ├── app/                     # Core Application Logic
+│   ├── traffic_control_server/  # Project Configuration (Settings, URLs)
 │   ├── static/                  # Static Assets
 │   │   └── admin/js/vendor/     # Dependencies (jQuery, Select2, XRegExp)
-│   └── ...
+│   └── manage.py                # Django Management Script
 ├── esp8266_firmware/               # ESP8266 Gateway Firmware
 │   └── esp8266_firmware.ino        # Logic for Wi-Fi, IR Sensors, and HTTP
 ├── nano_firmware/               # Arduino Nano Controller Firmware
