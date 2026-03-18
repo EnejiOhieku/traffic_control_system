@@ -17,7 +17,7 @@ import datetime
 """
 
 
-file_path = os.path.join(os.getcwd(), "app/data.json")
+file_path = os.path.join(os.path.abspath(os.path.dirname(__file__)), "data.json")
 
 
 def push_data(request: HttpRequest):
