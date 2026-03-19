@@ -6,7 +6,8 @@ The **Distributed Traffic Control System** is an IoT-based solution for managing
 ## Demo
 The project was done in 200L second semester, I was able to get a video I made from my google cloud to post on youtube (PS the video was poorly made 😂)
 
-[](tksadfkj)
+[![demo video](https://img.youtube.com/vi/jsNf7KCeVmA/0.jpg)](https://www.youtube.com/watch?v=jsNf7KCeVmA)
+https://www.youtube.com/watch?v=jsNf7KCeVmA
 
 
 ## System Architecture
